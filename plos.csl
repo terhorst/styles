@@ -74,10 +74,12 @@
   <macro name="access">
     <choose>
       <if variable="DOI">
-        <text term="&lt;a href="/>
-        <text variable="DOI" prefix="&quot;" suffix="&quot;&gt;"/>
-        <text term="link" text-case="capitalize-first"/>
-        <text term="&lt;/a&gt;"/>
+        <group>
+          <text term="&lt;a href="/>
+          <text variable="DOI" prefix="&quot;" suffix="&quot;&gt;"/>
+          <text term="link" text-case="capitalize-first"/>
+          <text term="&lt;/a&gt;"/>
+        </group>
       </if>
       <else-if variable="URL">
         <group delimiter=". ">
